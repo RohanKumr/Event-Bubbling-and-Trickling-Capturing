@@ -1,0 +1,130 @@
+:root {
+  /* --grand-parent: #827397;
+  --parent: #4d4c7d;
+  --child: #363062;
+  --bodyBackground: #e9d5ca; */
+  --bodyBackground: #dddddd;
+  --grand-parent: #827397;
+  --parent: #4d4c7d;
+  --child: #363062;
+  --box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+body {
+  box-sizing: border-box;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-wrap: wrap;
+  background: var(--bodyBackground);
+  margin: 24px;
+}
+
+.events {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.center-child {
+  display: grid;
+  place-items: center;
+}
+.b-10 {
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+}
+.b-10:hover {
+  box-shadow: none;
+}
+.grand-parent {
+  background: var(--grand-parent);
+  padding: 40px;
+}
+.parent {
+  background: var(--parent);
+  padding: 40px;
+}
+.child {
+  background: var(--child);
+  padding: 40px;
+}
+.grand-parent:hover,
+.parent:hover,
+.child:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+}
+.output {
+  max-height: 230px;
+  min-height: 230px;
+  overflow: hidden;
+}
+.list {
+  width: 250px;
+  padding: 0px;
+}
+.list li {
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+.capturing,
+.bubbling {
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+button {
+  outline: none;
+  border: none;
+  width: 150px;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+button:hover {
+  position: relative;
+  background-color: var(--grand-parent);
+  border: none;
+  color: #ffffff;
+
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 16px;
+    width: auto;
+  }
+  h1 {
+    text-align: left;
+    margin: 10px 0 10px 20px;
+  }
+  button {
+    width: auto;
+    padding: 12px 30px;
+  }
+  .grand-parent,
+  .parent,
+  .child {
+    padding: 30px;
+  }
+  .bubbling,
+  .capturing {
+    width: auto;
+    min-width: 340px;
+  }
+  .list {
+    width: auto;
+  }
+}

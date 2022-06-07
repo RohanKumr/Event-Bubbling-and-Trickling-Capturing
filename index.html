@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bubbling">
+      <h1>Bubbling</h1>
+      <div class="flex">
+        <div class="grand-parent center-child b-10">
+          <div class="parent center-child b-10">
+            <div class="child center-child b-10"></div>
+          </div>
+        </div>
+        <div class="output">
+          <button class="clear">Clear</button>
+          <ol class="list"></ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="capturing">
+      <h1>Capturing</h1>
+      <div class="flex">
+        <div class="grand-parent center-child b-10">
+          <div class="parent center-child b-10">
+            <div class="child center-child b-10"></div>
+          </div>
+        </div>
+        <div class="output">
+          <button class="clear">Clear</button>
+          <ol class="list"></ol>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
